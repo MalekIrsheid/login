@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:login/Home.dart';
+import 'package:login/main.dart';
 import 'package:login/screens/login.dart';
 
 class welcome_Page extends StatefulWidget {
@@ -23,14 +24,46 @@ class _welcState extends State<welcome_Page> {
                 "https://us.123rf.com/450wm/sommersby/sommersby1908/sommersby190800173/130588066-user-with-tie-working-on-laptop-concept-illustration-of-person-with-personal-computer.jpg?ver=6"),
           ),
           ListTile(
-            title: Text("malekirsheid2000@gmail.com"),
-            subtitle: Text("Email"),
+            title: Text(
+              "malekirsheid2000@gmail.com",
+              style: TextStyle(
+                fontFamily: "DancingScript",
+                color: Colors.black,
+                fontWeight: FontWeight.bold,
+                fontSize: 23,
+              ),
+            ),
+            subtitle: Text(
+              "Email",
+              style: TextStyle(
+                fontFamily: "DancingScript",
+                color: Colors.black,
+                fontWeight: FontWeight.bold,
+                fontSize: 20,
+              ),
+            ),
             tileColor: Colors.purple,
           ),
           ListTile(
             tileColor: Colors.blueAccent,
-            title: Text("Mobile Application Devlopment(Flutter)"),
-            subtitle: Text("LTUC"),
+            title: Text(
+              "Mobile Application Devlopment(Flutter)",
+              style: TextStyle(
+                fontFamily: "DancingScript",
+                color: Colors.black,
+                fontWeight: FontWeight.bold,
+                fontSize: 23,
+              ),
+            ),
+            subtitle: Text(
+              "LTUC",
+              style: TextStyle(
+                fontFamily: "DancingScript",
+                color: Colors.black,
+                fontWeight: FontWeight.bold,
+                fontSize: 20,
+              ),
+            ),
           )
         ],
       )),
@@ -38,31 +71,38 @@ class _welcState extends State<welcome_Page> {
         alignment: Alignment.center,
         decoration: BoxDecoration(
             image: DecorationImage(
-                image: NetworkImage(
-                    "http://m.gettywallpapers.com/wp-content/uploads/2020/04/Game-of-Thrones-Wallpaper-For-iphone.jpg"),
-                fit: BoxFit.fill)),
+                image: AssetImage("images/55.jpg"), fit: BoxFit.fill)),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
                 child: Text(
-              "welcome to my app",
+              "Welcome To My App",
               style: TextStyle(
+                fontFamily: "DancingScript",
                 color: Colors.white,
                 fontWeight: FontWeight.bold,
-                fontSize: 25,
+                fontSize: 30,
               ),
             )),
             ElevatedButton.icon(
                 onPressed: () {
                   Navigator.pop(context, MaterialPageRoute(
                     builder: (context) {
-                      return Log_in();
+                      return Home();
                     },
                   ));
                 },
                 icon: Icon(Icons.home),
-                label: Text("Home"))
+                label: Text(
+                  "Home",
+                  style: TextStyle(
+                    fontFamily: "DancingScript",
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 30,
+                  ),
+                ))
           ],
         ),
       ),
